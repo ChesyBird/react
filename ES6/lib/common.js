@@ -1,0 +1,12 @@
+// 두 수의 합 함수
+let add = (x, y) => x + y;
+
+// 절대값 계산
+let myAbs = (x) => {
+    if(x < 0)
+        return -x;
+    else
+        return x;
+}
+
+module.exports = {add, myAbs};
