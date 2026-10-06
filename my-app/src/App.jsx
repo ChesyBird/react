@@ -1,5 +1,7 @@
 import './App.css';
-import Example02 from './components/Example02';
+import Dog from './components/Dog';
+import Dog2 from './components/Dog2';
+import Example03 from './components/Example03';
 
 {/* jsx에서는 className 속성 사용
     태그는 병렬로 사용할 수 없음 : <div> 태그로 감싼다
@@ -21,7 +23,16 @@ function App() {
     <div>
       <h2>React 시작하기</h2>
       <h3 className="welcome">홈페이지 방문을 환영합니다.</h3>
-      <section>
+      <section className='app'>
+        {/* Props로 데이터 전달 */}
+        <Dog
+          breed="푸들"
+          age={13}
+        />
+        <Dog2 
+          breed="보더콜리"
+          age={5}
+        />
         {/* <p>현재 계절은 {season}입니다.</p> */}
         {/* 이미지 넣기 */}
         {/* <img
@@ -31,7 +42,8 @@ function App() {
         />
         <MyButton /> */}
         {/* <Example01 /> */}
-        <Example02 />
+        {/* <Example02 /> */}
+        {/* <Example03 /> */}
       </section>
     </div>
   )
