@@ -1,5 +1,7 @@
 import './App.css'
 import Drinks from './components/Drinks'
+import Test01 from './tests/Test01'
+import Test02 from './tests/Test02'
 
 function App() {
 
@@ -10,6 +12,8 @@ function App() {
         {/* <Counter /> */}
         {/* <InputValue /> */}
         <Drinks />
+        <Test01 />
+        <Test02 />
       </div>
     </>
   )
