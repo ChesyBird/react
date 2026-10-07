@@ -1,19 +1,21 @@
 import './App.css'
-import Drinks from './components/Drinks'
-import Test01 from './tests/Test01'
-import Test02 from './tests/Test02'
+import SignIn from './users/SignIn'
 
 function App() {
 
   return (
     <>
       <div className='app'>
-        <h2>리엑트 상태 관리</h2>
+        {/* <h2>리엑트 상태 관리</h2> */}
+        {/* <Clock /> */}
         {/* <Counter /> */}
         {/* <InputValue /> */}
-        <Drinks />
-        <Test01 />
-        <Test02 />
+        {/* <Drinks /> */}
+        {/* <Test01 /> */}
+        {/* <Test02 /> */}
+        {/* <User /> */}
+        {/* <SignUp /> */}
+        <SignIn />
       </div>
     </>
   )

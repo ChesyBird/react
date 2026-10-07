@@ -1,0 +1,76 @@
+import { useState } from "react";
+import users from "../data/users";
+
+
+const SignIn = () => {
+
+    const [formData, setFormData] = useState({
+        username: "", // id
+        password: ""  // pw
+    })
+
+    //로그인 결과 상태 관리
+    // 객체 초기화 : null
+    const [result, setResult] = useState("");
+
+    const handleInputChange = (e) => {
+        const {name, value} = e.target;
+
+        setFormData({...formData, [name]: value})
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("제출 데이터: ", formData);
+
+        // 로그인 결과처리
+        const {username, password} = formData;
+
+        // 데이터 일치 여부 : find()
+        const matched = users.find((user) => 
+            user.username === username && user.password === password);
+
+        setResult(matched ? "success" : "fail");
+
+        // 입력값 초기화
+        setFormData({username: "", password: ""});
+    }
+
+    return (
+        <div className="sign-in">
+            <h2>로그인</h2>
+            <form onSubmit={handleSubmit}>
+                <ul>
+                    <li>
+                        <input
+                            type="text"
+                            name="username"
+                            placeholder="아이디를 입력해주세요"
+                            value={formData.username}
+                            onChange={handleInputChange}
+                        />
+                    </li>
+                    <li>
+                        <input
+                            type="password"
+                            name="password"
+                            placeholder="비밀번호를 입력해주세요"
+                            value={formData.password}
+                            onChange={handleInputChange}
+                        />
+                    </li>
+                    <li>
+                        <button type="submit">로그인</button>
+                    </li>
+                </ul>
+            </form>
+            {/* 결과메세지 출력 */}
+            {result === "success" &&
+                (<p style={{color: "blue"}}>환영합니다.</p>)}
+            {result === "fail" &&
+                (<p style={{color: "red"}}>아이디 또는 비밀번호를 확인해주세요.</p>)}
+        </div>
+    )
+}
+
+export default SignIn;
