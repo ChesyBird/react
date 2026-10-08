@@ -1,0 +1,25 @@
+.container {
+    width: 400px;
+    height: 300px;
+    border: 1px solid #000;
+    display: flex;
+    /* 수직 정렬 */
+    align-items: center; /* 가운데 */
+    align-items: start; /* 기본(탑) */
+    align-items: end; /* bottom */
+    flex-direction: row-reverse; /* 스타트 지점을 반전 */
+    justify-content: space-around;
+    justify-content: flex-end;
+    flex-direction: row; /* 끝으로 밀기 */
+    gap: 16px; /* 객체간의 간격 */
+}
+
+.box {
+    width: 60px;
+    height: 60px;
+    background-color: rgb(250, 235, 100);
+}
+
+p{
+    text-align: center;
+}

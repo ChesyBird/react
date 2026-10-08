@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    /* gap: 16px; /* 객체간의 간격 */
+    /* 수평인 상태에서 정렬 */
+    justify-content: flex-start; /* 왼쪽 */
+    justify-content: flex-end; /* 오른쪽 */
+    justify-content: center; /* 가운데 */
+    justify-content: space-around; /* 균등하게 정렬 */
+    justify-content: space-between; /* 사이를 정렬 */
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(104, 187, 104);
+}

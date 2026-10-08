@@ -1,8 +1,10 @@
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 import './App.css'
+import Header from "./layouts/header"
 import Main from './pages/Main'
-import SignUp from './pages/SignUp'
 import SignIn from './pages/SignIn'
+import SignUp from './pages/SignUp'
+import About from "./pages/About"
 
 function App() {
 
@@ -11,17 +13,14 @@ function App() {
     <>
       <section className="app">
         <BrowserRouter>
-          <div className='header'>
-            <Link to="/">Home</Link>
-            <Link to="/signup">회원가입</Link>
-            <Link to="/signin">로그인</Link>
-          </div>
+          <Header />
 
           <div className='content'>
             <Routes>
               <Route path='/' element={<Main />} />
               <Route path='/signup' element={<SignUp />} />
               <Route path='/signin' element={<SignIn />} />
+              <Route path="/about" element={<About />} />
             </Routes>
           </div>
         </BrowserRouter>

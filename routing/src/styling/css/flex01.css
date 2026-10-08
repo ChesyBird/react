@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    gap: 16px; /* 객체간의 간격 */
+    flex-direction: row;
+    flex-direction: column;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(135, 192, 211);
+}
