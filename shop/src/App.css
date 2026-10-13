@@ -14,6 +14,11 @@
     color: #f7ec53;
 }
 
+/* Main 스타일 */
+.main img {
+    margin-top: 20px;
+}
+
 /* 상품 목록 스타일 */
 .product-list table {
     width: 60%;
@@ -27,6 +32,13 @@
 .product-list table th, td {
     border: 1px solid #a7a7a7;
     padding: 6px;
+}
+.product-list .btn-add {
+    text-align: right;
+    margin-right: 20%;
+}
+.product-list .btn-add button {
+    padding: 6px 16px;
 }
 
 /* 상품 상세페이지 스타일 */
@@ -66,4 +78,5 @@
 .add-product form button {
     padding: 6px 12px;
     cursor: pointer;
+    margin: 4px;
 }

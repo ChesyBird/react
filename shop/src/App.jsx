@@ -2,9 +2,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
 import Header from './layouts/Header';
 import Main from './layouts/Main';
-import ProductList from "./products/ProductList";
+import AddProduct from "./products/AddProduct";
 import ProductInfo from "./products/ProductInfo";
-import AddProduct from "./layouts/AddProduct";
+import ProductList from "./products/ProductList";
 
 function App() {
 
