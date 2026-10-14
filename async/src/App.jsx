@@ -4,6 +4,7 @@ import FetchAll from './components/FetchAll'
 import FetchOneById from './components/FetchOneById'
 import AxiosTodos from './axios_ex/AxiosTodos'
 import AxiosTodoById from './axios_ex/AxiosTodoById'
+import AxiosNewTodo from './axios_ex/AxiosNewTodo'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
             {/* axios방식 */}
             <Route path='/' element={<AxiosTodos />} />
             <Route path='/axios/:id' element={<AxiosTodoById />} />
+            <Route path='/axios-post' element={<AxiosNewTodo />} />
           </Routes>
         </BrowserRouter>
       </section>
