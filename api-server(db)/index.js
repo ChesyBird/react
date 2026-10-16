@@ -60,6 +60,57 @@ app.post("/api/products", (req, res)=>{
     })
 });
 
+// 상품 상세보기(1건)
+app.get("/api/products/:id", (req,res)=>{
+    const productId = req.params.id;
+
+    const sql = "SELECT * FROM product WHERE id = ?";
+
+    db.query(sql, [productId], (err, results)=>{
+        if(err){
+            console.log("상품 조회 에러", err);
+            res.send("상품 조회 중 오류가 발생하였습니다.");
+            return;            
+        }
+        res.json(results[0]); // 1건(맨 앞)
+    })
+})
+
+// 상품 삭제
+// app.delete(URL경로, ()=>{})
+app.delete("/api/products/:id", (req, res)=>{
+    const productId = req.params.id;
+    const sql = "DELETE FROM product WHERE id = ?";
+
+    db.query(sql, [productId], (err, results)=>{
+        if(err){
+            console.log("상품 삭제 에러", err);
+            res.send("상품 삭제 중 오류가 발생하였습니다.");
+            return;            
+        }
+        res.send("상품이 성공적으로 삭제되었습니다.");
+    })
+})
+
+// 상품 정보 수정
+// app.put(URL경로, ()=>{})
+app.put("/api/products/:id", (req, res)=>{
+    // 수정하려면 이미 존재하는 상품(id)을 가져와야함
+    const productId = req.params.id;
+    const {productName, price} = req.body; // 수정된 데이터
+    const sql = "UPDATE product SET product_name=?, price=? WHERE id = ?"
+    
+    db.query(sql, [productName, price, productId], (err, results)=>{
+        if(err){
+            console.log("상품 수정 에러", err);
+            // 500 : 코드오류, 404 : 페이지 없음, 200 : 정상
+            res.send("상품 수정 중 오류가 발생하였습니다."); // res.status(501).send()
+            return;
+        }
+        res.send("상품이 성공적으로 수정되었습니다.");
+    })
+})
+
 // 서버 실행
 app.listen(PORT, ()=>{
     console.log(`http://localhost:${PORT}에서 서버 실행중...`);
