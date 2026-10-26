@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const CountReducer = () => {
+const Counter = () => {
 
     const [count, setCount] = useState(0);
 
@@ -14,9 +14,11 @@ const CountReducer = () => {
         setCount(0);
     }
 
+
+
     return (
         <div>
-            <h2>useReducer() 실습</h2>
+            <h2>useState()방식</h2>
             <p>상태 : {count} </p>
             <button onClick={increaseCnt}>증가</button>
             <button onClick={decreaseCnt}>감소</button>
@@ -25,4 +27,4 @@ const CountReducer = () => {
     )
 }
 
-export default CountReducer;
+export default Counter;

@@ -1,7 +1,11 @@
 import './App.css'
-import CountReducer from './components/CountReducer'
-import InputFocus from './components/InputFocus'
 import UseRefEx from './components/UseRefEx'
+import InputFocus from './components/InputFocus'
+import Counter from './components/Counter'
+import CountReducer from './hooks/CountReducer'
+import BankReducer from './hooks/BankReducer'
+import UserParent from './use_context/UserParent'
+import CounterReducer from './apps/CounterReducer'
 
 function App() {
 
@@ -11,7 +15,11 @@ function App() {
       <div className='app'>
         <UseRefEx />
         <InputFocus />
+        <Counter />
         <CountReducer />
+        <BankReducer />
+        <UserParent />
+        <CounterReducer />
       </div>
     </>
   )
