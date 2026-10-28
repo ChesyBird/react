@@ -6,6 +6,8 @@ import CountReducer from './hooks/CountReducer'
 import BankReducer from './hooks/BankReducer'
 import UserParent from './use_context/UserParent'
 import CounterReducer from './apps/CounterReducer'
+import ButtonSample from './styling/ButtonSample'
+import Blocks from './styling/Blocks'
 
 function App() {
 
@@ -13,13 +15,15 @@ function App() {
   return (
     <>
       <div className='app'>
-        <UseRefEx />
+        {/* <UseRefEx />
         <InputFocus />
         <Counter />
         <CountReducer />
         <BankReducer />
         <UserParent />
-        <CounterReducer />
+        <CounterReducer /> */}
+        {/* <ButtonSample /> */}
+        <Blocks />
       </div>
     </>
   )
