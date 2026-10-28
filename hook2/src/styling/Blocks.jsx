@@ -36,7 +36,7 @@ const Blocks = () => {
                 color="#00f"
                 onClick={()=>handleClick('blue')}
             />
-            {clicked && <p>클릭한 색상: {clicked}</p>}
+            {clicked && <p style={{color: clicked}}>클릭한 색상: {clicked}</p>}
         </Wrapper>
         
     )
